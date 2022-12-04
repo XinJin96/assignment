@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Interview_assignment:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Interview_assignment</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Interview_assignment-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Interview_assignment:war exploded" />
+    </root>
+  </artifact>
+</component>
