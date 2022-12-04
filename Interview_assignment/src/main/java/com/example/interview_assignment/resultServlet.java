@@ -9,15 +9,24 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "resultServlet", value = "/resultServlet")
+@WebServlet(name = "resultServlet", urlPatterns = {"/result"})
 public class resultServlet extends HttpServlet {
+
+    @Override
+    public void init() throws ServletException {
+        System.out.println("call init");
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doPost(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        System.out.println(request.getParameter("back") );
+        if (request.getParameter("back") !=null){
+            request.getRequestDispatcher("search.html").forward(request, response);
+        }
     }
 }

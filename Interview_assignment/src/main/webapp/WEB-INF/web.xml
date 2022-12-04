@@ -6,6 +6,7 @@
 
     <welcome-file-list>
         <welcome-file>search.html</welcome-file>
+        <welcome-file>result.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>searchServlet</servlet-name>
